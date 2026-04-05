@@ -65,3 +65,96 @@ The system achieves **99.97% accuracy** with **100% failure detection rate** and
 | 198 | Offline Uncorrectable | Critical failure indicator |
 
 ## 🏗️ System Architecture
+┌─────────────────────────────────────────────────────────────────┐
+│ DATA CENTER / OFFICE │
+│ │
+│ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ │
+│ │ Computer 1 │ │ Computer 2 │ │ Computer 3 │ │
+│ │ (Client) │ │ (Client) │ │ (Client) │ │
+│ │ ↓ Monitor │ │ ↓ Monitor │ │ ↓ Monitor │ │
+│ └──────┬───────┘ └──────┬───────┘ └──────┬───────┘ │
+│ │ │ │ │
+│ └─────────────────────┼─────────────────────┘ │
+│ │ │
+│ ▼ │
+│ ┌─────────────────────────────────────────────────────────┐ │
+│ │ CENTRAL SERVER │ │
+│ │ ┌───────────────┐ ┌───────────────┐ │ │
+│ │ │ API Server │◄───│ MySQL │ │ │
+│ │ │ (Port 5001) │ │ Database │ │ │
+│ │ └───────┬───────┘ └───────────────┘ │ │
+│ │ │ │ │
+│ │ ▼ │ │
+│ │ ┌───────────────┐ │ │
+│ │ │ Web Dashboard│ │ │
+│ │ │ (Port 5000) │ │ │
+│ │ └───────────────┘ │ │
+│ └─────────────────────────────────────────────────────────┘ │
+│ │ │
+│ ▼ │
+│ ┌─────────────────────────────────────────────────────────┐ │
+│ │ ADMIN / USER (Web Browser) │ │
+│ └─────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────┘
+
+## 🛠️ Technology Stack
+
+| Category | Technology | Version |
+|----------|------------|---------|
+| Language | Python | 3.12 |
+| Web Framework | Flask | 2.3 |
+| Database | MySQL | 8.0 |
+| ML Model | XGBoost | 1.7 |
+| ML Support | scikit-learn | 1.3 |
+| Data Processing | pandas | 2.0 |
+| Visualization | plotly | 5.18 |
+| HTTP Client | requests | 2.31 |
+
+## 📁 Project Structure
+hard-drive-failure-prediction/
+│
+├── central_server/ # Web dashboard and API
+│ ├── app.py # Main Flask application
+│ ├── api.py # API server (port 5001)
+│ ├── auth.py # User authentication
+│ ├── models.py # Database models
+│ ├── config.py # Configuration settings
+│ ├── static/ # CSS and logo
+│ └── templates/ # HTML templates (17 files)
+│
+├── monitor_client/ # Client for data center servers
+│ ├── client_monitor.py # Main monitor script
+│ └── client_config.json # Configuration
+│
+├── auto_monitor/ # Desktop monitor
+│ └── simple_monitor.py
+│
+├── models/ # Trained ML model
+│ └── failure_predictor_best.pkl
+│
+├── src/ # Core Python scripts
+│ ├── data_preprocessing.py
+│ ├── feature_engineering.py
+│ ├── train_model_final.py
+│ └── identify_failures.py
+│
+├── logs/ # Log files
+├── requirements.txt # Python dependencies
+└── README.md # This file
+
+
+## 🚀 Installation Guide
+
+### Prerequisites
+
+- Windows 10/11 (64-bit)
+- 4 GB RAM (8 GB recommended)
+- 20 GB free disk space
+- MySQL Server 8.0 or higher
+- Python 3.8 or higher
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/your-username/hard-drive-failure-prediction.git
+cd hard-drive-failure-prediction
