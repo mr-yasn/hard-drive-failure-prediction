@@ -235,10 +235,6 @@ Export reports (PDF/Excel)
 
 👨‍💻 Author
 Mohd Yasin
-Roll No: 108023539006
-B.Sc. (Mathematics, Statistics and Data Science)
-Don Bosco Degree College
-Osmania University, Hyderabad
 
 📧 Contact
 For any queries regarding this project, please contact:
@@ -271,26 +267,5 @@ If you found this project useful, please give it a star on GitHub!
 | 5 | Delete all existing content |
 | 6 | Paste the copied content |
 | 7 | Scroll down and click **"Commit changes"** |
-
----
-
-## After You Commit
-
-Your GitHub repository will show:
-
-- ✅ Badges at the top
-- ✅ Project overview
-- ✅ Model performance table
-- ✅ Dataset information
-- ✅ Architecture diagram (text-based)
-- ✅ Technology stack table
-- ✅ Project structure
-- ✅ Installation guide with commands
-- ✅ Usage guide
-- ✅ Feature importance table
-- ✅ Future enhancements
-- ✅ Author information
-
----
 
 **Your README.md is now complete!** 🎉
