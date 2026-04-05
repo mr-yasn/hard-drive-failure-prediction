@@ -153,3 +153,144 @@ hard-drive-failure-prediction/
 - MySQL Server 8.0 or higher
 - Python 3.8 or higher
 
+Step 2: Install Python Dependencies
+pip install -r requirements.txt
+Step 3: Set Up MySQL Database
+# Import database schema
+mysql -u root -p < mysys_database_dump.sql
+Step 4: Start the Application
+cd central_server
+python app.py
+Step 5: Open Browser
+Go to http://localhost:5000
+
+Default Login
+Username	Password
+admin	admin123
+
+📖 Usage Guide
+Web Dashboard
+Login with your credentials
+
+Dashboard - View statistics and recent predictions
+
+Predict - Enter SMART values and get failure probability
+
+Time Series - View drive health trends over time
+
+What-If - Adjust sliders to see real-time probability changes
+
+Alerts - View and resolve high-risk alerts
+
+My Drives - See drives assigned to you
+
+Profile - View your account information
+
+Admin Panel (Admin only)
+User Management - View all users, change roles, activate/deactivate
+
+Assign Drives - Assign specific drives to users
+
+All Predictions - View predictions from all users
+
+All Alerts - View alerts from all users
+
+Client Monitor (for multiple computers)
+Edit monitor_client/client_config.json
+
+Set central_url to your server IP
+
+Run: python monitor_client/client_monitor.py
+
+📊 Feature Importance
+Top 10 features used by the XGBoost model:
+
+Rank	Feature	Importance
+1	Power-On Hours (7-day avg)	15.7%
+2	Power-On Hours (minimum)	13.8%
+3	Power-On Hours (15-day avg)	13.2%
+4	Power-On Hours (30-day avg)	12.9%
+5	Power-On Hours (maximum)	10.5%
+6	Month	6.8%
+7	Power-On Hours (daily change)	5.1%
+8	Pending Sectors (maximum)	2.8%
+9	Uncorrectable Errors (maximum)	2.3%
+10	Uncorrectable Errors (15-day avg)	1.6%
+🔮 Future Enhancements
+SSD failure prediction (different SMART attributes)
+
+Real-time streaming with Apache Kafka
+
+Email and SMS alerts (Twilio integration)
+
+Mobile app for Android and iOS
+
+Cloud deployment (AWS EC2 + RDS)
+
+Docker containerization
+
+Auto-retraining pipeline
+
+Export reports (PDF/Excel)
+
+👨‍💻 Author
+Mohd Yasin
+Roll No: 108023539006
+B.Sc. (Mathematics, Statistics and Data Science)
+Don Bosco Degree College
+Osmania University, Hyderabad
+
+📧 Contact
+For any queries regarding this project, please contact:
+Email: yasin.vertasolutions@gmail.com
+
+📝 License
+This project is for educational purposes. MIT License.
+
+🙏 Acknowledgments
+Backblaze for providing the Drive Stats dataset
+
+Don Bosco Degree College faculty for guidance and support
+
+Open-source community for libraries and tools
+
+⭐ Star This Repository
+If you found this project useful, please give it a star on GitHub!
+
+
+---
+
+## What to Do Now
+
+| Step | Action |
+|------|--------|
+| 1 | Copy the entire content above |
+| 2 | Go to `https://github.com/your-username/hard-drive-failure-prediction` |
+| 3 | Click on `README.md` |
+| 4 | Click the pencil icon (✏️) |
+| 5 | Delete all existing content |
+| 6 | Paste the copied content |
+| 7 | Scroll down and click **"Commit changes"** |
+
+---
+
+## After You Commit
+
+Your GitHub repository will show:
+
+- ✅ Badges at the top
+- ✅ Project overview
+- ✅ Model performance table
+- ✅ Dataset information
+- ✅ Architecture diagram (text-based)
+- ✅ Technology stack table
+- ✅ Project structure
+- ✅ Installation guide with commands
+- ✅ Usage guide
+- ✅ Feature importance table
+- ✅ Future enhancements
+- ✅ Author information
+
+---
+
+**Your README.md is now complete!** 🎉
