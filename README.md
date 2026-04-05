@@ -153,8 +153,3 @@ hard-drive-failure-prediction/
 - MySQL Server 8.0 or higher
 - Python 3.8 or higher
 
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/your-username/hard-drive-failure-prediction.git
-cd hard-drive-failure-prediction
